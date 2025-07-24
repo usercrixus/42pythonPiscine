@@ -4,6 +4,12 @@ from rotate import rotate
 from zoom import get_zoomed
 import matplotlib.pyplot as plt
 import numpy as np
+from PIL import Image # pip install pillow
+
+def printShape(img:Image):
+    img_array = np.array(img)
+    print("Image shape (H, W, C):", img_array.shape)
+    print("Pixel values (RGB):\n", img_array)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -12,14 +18,16 @@ if __name__ == "__main__":
 
     image_path = sys.argv[1]
     img = ft_load(image_path)
+    printShape(img)
 
     if img is not None:
         zoomed_img = get_zoomed(img, zoom_factor=2)
         if zoomed_img is not None:
+            printShape(zoomed_img)
             rotated_img = rotate(zoomed_img)
             if rotated_img is not None:
+                printShape(rotated_img)
                 rotated_array = np.array(rotated_img)
-
                 plt.imshow(rotated_array)
                 plt.title("Zoomed and Transposed Image")
                 plt.xlabel("Pixels (X axis)")
