@@ -1,5 +1,6 @@
 import sys
 
+
 def helper():
     """Help to print morse string"""
 
@@ -56,7 +57,7 @@ def helper():
             for x in argv[1].upper():
                 print(NESTED_MORSE[x], end='')
             print()
-    
+
 
 if __name__ == "__main__":
     helper()

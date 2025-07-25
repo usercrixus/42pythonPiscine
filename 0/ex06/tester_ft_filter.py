@@ -1,6 +1,7 @@
 from ft_filter import ft_filter
 
 def myfilter(element):
+    "filter on word o"
     if (element == "o"):
         return False
     else:
