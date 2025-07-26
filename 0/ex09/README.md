@@ -8,7 +8,7 @@ This is a simple Python package for learning purposes.
 
 ## todo
 
- Step 6: Build the package
+Step 6: Build the package
 
 In your ex09/ directory:
 

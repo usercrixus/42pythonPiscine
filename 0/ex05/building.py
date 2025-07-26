@@ -1,6 +1,7 @@
 import sys
 
-def insight(text:str):
+
+def insight(text: str):
     """give insight on the text passed as argument"""
     upper = 0
     lower = 0
@@ -26,6 +27,7 @@ def insight(text:str):
     print(f"{ponctuation} punctuation marks")
     print(f"{space} spaces")
     print(f"{digit} digits")
+
 
 if __name__ == "__main__":
     argv = sys.argv
