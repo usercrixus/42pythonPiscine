@@ -1,6 +1,4 @@
-from PIL import Image
 import numpy as np
-import sys
 from load_image import ft_load, printShape
 import matplotlib.pyplot as plt
 
@@ -34,17 +32,13 @@ def rotate(img_array: np.ndarray) -> np.ndarray:
 
 
 def square(img_array: np.ndarray) -> np.ndarray:
+    "square the img"
     mxValue = min(img_array.shape[0], img_array.shape[1])
     return img_array[0:mxValue, 0:mxValue]
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python3 transpose_image.py <image_path>")
-        sys.exit(1)
-
-    image_path = sys.argv[1]
-    img = ft_load(image_path)
+    img = ft_load("animal.jpeg")
 
     if img is not None:
         squared = square(img)

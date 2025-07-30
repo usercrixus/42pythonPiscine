@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 from load_csv import load
 import numpy as np
 
+
 def main():
     df = load("life_expectancy_years.csv")
     if df is None:
@@ -32,6 +33,7 @@ def main():
     plt.legend()
     plt.tight_layout()
     plt.show()
+
 
 if __name__ == "__main__":
     main()

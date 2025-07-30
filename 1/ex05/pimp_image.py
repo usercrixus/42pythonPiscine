@@ -1,7 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def print_img(img_array: np.ndarray):
+    "helper to displqy img"
     plt.imshow(img_array)
     plt.title("My img")
     plt.xlabel("Pixels (X axis)")

@@ -1,11 +1,12 @@
 import matplotlib.pyplot as plt
 from load_csv import load
 
+
 def main():
     # Load datasets
     income_df = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
     life_df = load("life_expectancy_years.csv")
-    
+
     if income_df is None or life_df is None:
         print("Error loading one or both datasets.")
         return
@@ -28,7 +29,8 @@ def main():
 
     # Drop rows with missing or non-numeric values
     merged = merged.dropna()
-    merged = merged[(merged["income"] != "..") & (merged["life_expectancy"] != "..")]
+    merged = merged[(merged["income"] != "..")
+                    & (merged["life_expectancy"] != "..")]
 
     # Convert to float
     merged["income"] = merged["income"].astype(float)
@@ -42,6 +44,7 @@ def main():
     plt.grid(True)
     plt.tight_layout()
     plt.show()
+
 
 if __name__ == "__main__":
     main()

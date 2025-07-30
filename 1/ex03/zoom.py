@@ -1,7 +1,5 @@
-from PIL import Image
 import numpy as np
 from load_image import ft_load, printShape
-import sys
 import matplotlib.pyplot as plt
 
 
@@ -27,12 +25,7 @@ def get_zoomed(img_array: np.ndarray, zoom_factor=2):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python3 test.py <image_path>")
-        sys.exit(1)
-
-    image_path = sys.argv[1]
-    img = ft_load(image_path)
+    img = ft_load("animal.jpeg")
 
     if img is not None:
         zoomed = get_zoomed(img, zoom_factor=2)
